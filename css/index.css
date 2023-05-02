@@ -405,6 +405,10 @@ section {
     transition: 0.5s;
 }
 
+.button ul li a {
+    display: block;/*让a填满li*/
+}
+
 .button ul li:hover {
     background: #4ae4ff;
     height: 45px;
@@ -436,6 +440,10 @@ section {
         justify-content: space-evenly;
         flex-wrap: wrap;
         flex-direction: column;
+    }
+
+    .card .content .details {
+        padding-top: 10px;
     }
 
     .cr-text {

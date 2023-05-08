@@ -3,7 +3,7 @@
     cursor: url(../img/pointer32.png), auto !important;
 }
 
-a,button {
+a,button,i,.em-1 p {
     cursor: url(../img/link32.png), auto !important;
 }
 /* 鼠标样式 */
@@ -33,6 +33,97 @@ a {
 }
 
 /* 初始化 */
+
+/* 回到顶部 */
+.up {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.xup {
+    width: 50px;
+    height: 50px;
+    z-index: 998;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border-radius: 50px;
+    margin-bottom: 5%;
+    margin-right: 2%;
+    box-shadow: 3px 3px 3px black;
+}
+
+.xuo a {
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+/* 回到顶部 */
+
+/* emil */
+.dbj {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.em {
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 25px;
+}
+
+.em .em-1 {
+    margin: 2% 3% 0 0;
+    font-size: 25px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.em .em-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.em .em-2 p {
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.em .em-2 a {
+    color: black;
+    font-weight: 900;
+}
+
+.em .em-2 a:hover {
+    color: #ff5f95;
+    text-decoration: underline;
+    text-shadow: 1px 1px #555;
+}
+
+.emil {
+    margin-right: 2%;
+    margin-left: 2%;
+}
+/* emil */
 
 /* 头部 */
 .header {
@@ -114,7 +205,7 @@ section {
     content: '';
     position: absolute;
     right: -20px;
-    top: 14px;
+    top: 6px;
     height: 35px;
     width: 7px;
     background-color: #fff;
@@ -231,6 +322,7 @@ section {
 /*卡片*/
 
 .card {
+    z-index: 997;
     margin-top: 5%;
     position: relative;
     width: 350px;
@@ -355,9 +447,9 @@ section {
     width: 100vw;
     z-index: 999;
     background: rgba(0, 0, 0, 0);
-    height: 50px;
+    height: 5vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -444,6 +536,18 @@ section {
 
     .card .content .details {
         padding-top: 10px;
+    }
+
+    .xup {
+        margin-bottom: 10%;
+    }
+
+    .emil {
+        display: none;
+    }
+
+    .lts {
+        display: block !important;
     }
 
     .cr-text {

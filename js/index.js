@@ -41,3 +41,20 @@ $("#yc").dblclick (
     }
 )
 
+$(".emil").click (
+    function () {
+        $(".dbj").fadeIn();
+    }
+)
+
+$(".em-1").click (
+    function () {
+        $(".dbj").hide();
+    }
+)
+
+$(".lem").click (
+    function () {
+        $(".dbj").fadeIn();
+    }
+)

@@ -58,3 +58,7 @@ $(".lem").click (
         $(".dbj").fadeIn();
     }
 )
+
+window.onload = function () {
+	$(".ld").fadeOut(1000);
+}

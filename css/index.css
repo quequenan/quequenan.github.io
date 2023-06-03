@@ -6,7 +6,8 @@
 a,
 button,
 i,
-.em-1 p {
+.em-1 p,
+.sbdj {
     cursor: url(../img/link32.png), auto !important;
 }
 
@@ -16,7 +17,7 @@ i,
 ::selection {
     /*选中样式*/
     background: rgba(255, 123, 244, 0.5);
-    color: #ffffff;
+    color: #fff;
 }
 
 
@@ -28,8 +29,8 @@ i,
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: 0.5s;
     list-style: none;
+    transition: 0.5s;
 }
 
 a {
@@ -96,6 +97,7 @@ a {
 /* 加载动画 */
 
 /* 回到顶部 */
+
 .xup {
     position: fixed;
     top: 90vh;
@@ -111,7 +113,10 @@ a {
     border-radius: 80px;
     margin-bottom: 5%;
     margin-right: 2%;
-    box-shadow: 3px 3px 3px black;
+}
+
+.xup:hover {
+    box-shadow: 0px 0px 5px 2px rgba(34, 34, 34, 0.795);
 }
 
 .xup a {
@@ -126,6 +131,7 @@ a {
 /* 回到顶部 */
 
 /* emil */
+
 .dbj {
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -184,6 +190,7 @@ a {
 /* emil */
 
 /* 头部 */
+
 .header {
     text-align: center;
     width: 100vw;
@@ -202,11 +209,11 @@ a {
     justify-content: center;
 }
 
-.xs img {
+.xs a {
     transition: 0.5s;
 }
 
-.xs img:hover {
+.xs a:hover {
     transform: translateY(-20px);
 }
 
@@ -504,10 +511,11 @@ section {
 /*卡片*/
 
 /* 导航栏 */
+
 .nav {
-    padding-right: 1%;
     position: fixed;
     width: 100vw;
+    transition: 0.5s;
     z-index: 999;
     background: rgba(0, 0, 0, 0);
     height: 5vh;
@@ -516,28 +524,45 @@ section {
     align-items: center;
 }
 
+.nav .nav-ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: 0;
+}
+
+.nav .nav-ul li {
+    width: 150px;
+    font-weight: bolder;
+    text-align: center;
+}
+
 .nav h1 {
     margin-left: 1%;
     font-size: 1em;
     color: rgba(0, 0, 0, 0);
 }
 
-.nav i {
+.nav ul {
     color: white;
 }
 
 .nav:hover {
+    box-shadow: 1px 1px 5px 5px rgba(61, 61, 61, 0.8);
     background: white;
 }
 
 .nav:hover i,
-.nav:hover h1 {
+.nav:hover ul li {
     color: black;
 }
+
 
 /* 导航栏 */
 
 /* 导航栏下拉菜单 */
+
 .button {
     height: 50px;
     line-height: 50px;
@@ -546,18 +571,27 @@ section {
 }
 
 .button ul {
-    margin-top: 2vh;
     width: 150px;
 }
 
 .button ul li {
-    border-radius: 10px;
-    margin-bottom: 5%;
     height: 0;
     opacity: 0;
     transform: translateY(-50px);
     background-color: white;
     transition: 0.5s;
+}
+
+.button ul .r1 {
+    border-radius: 10px 10px 0 0;
+}
+
+.button ul .r2 {
+    border-radius: 0 0 10px 10px;
+}
+
+.button ul .r3 {
+    border-radius: 10px;
 }
 
 .button ul li a {
@@ -567,7 +601,6 @@ section {
 
 .button ul li:hover {
     background: #4ae4ff;
-    height: 45px;
 }
 
 .button ul li:hover a {
@@ -579,7 +612,7 @@ section {
     color: black;
 }
 
-.button:hover li {
+.shell:hover li {
     height: 50px;
     opacity: 1;
     transform: translateY(0);
@@ -589,6 +622,19 @@ section {
 
 
 @media (max-width: 1080px) {
+    /* 隐藏显示 */
+
+    .xys-xs {
+        display: block !important;
+    }
+
+    .xys-yc {
+        display: none;
+    }
+
+    /* 隐藏显示 */
+
+    /*卡片*/
 
     .cord-a,
     .cord-b {
@@ -602,12 +648,18 @@ section {
         padding-top: 10px;
     }
 
-    .xup {
-        display: none;
+    /*卡片*/
+
+    /* 导航栏与下拉 */
+
+    .nav {
+        box-shadow: none;
     }
 
-    .emil {
-        display: none;
+    .nav-ul {
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
     }
 
     .lts {
@@ -616,15 +668,8 @@ section {
         justify-content: space-evenly;
     }
 
-    .cr-text {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-
     .button ul li {
-        width: 100vw;
+        width: 100vw !important;
         margin: 0;
         border-radius: 0 0;
     }
@@ -649,16 +694,41 @@ section {
         color: black;
     }
 
-    .nav h1 {
-        display: none;
-    }
-
-    .nav {
-        padding: 0;
-        justify-content: center;
-    }
-
     .nav:hover {
         border-bottom: 5px solid black;
     }
+
+    .nav-ul,
+    .shell {
+        width: 100%;
+    }
+
+    /* 导航栏与下拉 */
+
+    /*回到顶部*/
+
+    .xup {
+        display: none;
+    }
+
+    /* 回到顶部 */
+
+    /* emil */
+
+    .emil {
+        display: none;
+    }
+
+    /* emil */
+
+    /* 主体 */
+
+    .cr-text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 主体 */
 }
